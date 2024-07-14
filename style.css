@@ -1,0 +1,118 @@
+/* universal */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik",sans-serif;
+}
+
+/* body */
+body{
+    height: 100vh;
+     background-image: url("ground.webp");
+     background-size: cover;
+     background-repeat: no-repeat;
+}
+
+/* container */
+.container{
+    background-color: #1e59d9;
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: 15px 10px 15px rgba(39, 2, 248, 0.1);
+    border-radius: 10px;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+/* result */
+.stats { 
+    border-radius: 10px;
+    background-color: #5961aa;
+    text-align: center;
+    font-size: 24px; 
+    color: #ef0f0f; 
+    text-transform: uppercase; 
+    text-shadow: 1px 1px 2px rgba(25, 205, 229, 0.9); 
+    letter-spacing: 2px; 
+} 
+
+/* coins */
+.coin{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+.coin img{
+    width: 145px;
+}
+
+img{
+    border-radius: 60%;
+    border: 1px solid white;
+}
+.heads,.tails{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+.tails{
+    transform: rotateX(180deg);
+}
+
+/* rotation */
+@keyframes spin-tails{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
+@keyframes spin-heads{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+}
+
+/* buttons */
+button{
+    width: 120px;
+    padding: 10px 0;
+    border: 3px solid #2903fc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+#flip-button{
+    background-color: #02ff70;
+    color: #3a22c3;
+    width: 100%;
+}
+#flip-button:disabled{
+    background-color: #1e59d9;
+    border-color: #1e59d9;
+    color: #1e59d9;
+}
+
+/* responsiveness */
+@media screen and (max-width: 480px) {
+    body {
+      background-color: red;
+    }
+    .container{
+        width: 80%;
+    }
+  }
