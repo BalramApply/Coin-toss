@@ -10,23 +10,24 @@ let tails = 0;
 // toss
 flipBtn.addEventListener("click", () => {
     let i = Math.floor(Math.random() * 10 + 1);
-    console.log(i);
     coin.style.animation = "none";
 
     // head or tail
     if(i % 2 == 0){
         setTimeout(function(){
-            coin.style.animation = "spin-heads 5s forwards";
+            coin.style.animation = "spin-heads 6s forwards";
         }, 100);
         heads++;
     }
     else{
         setTimeout(function(){
-            coin.style.animation = "spin-tails 5s forwards";
+            coin.style.animation = "spin-tails 6s forwards";
         }, 100);
         tails++;
     }
-    setTimeout(updateStats, 5000);
+    setTimeout(updateStats, 6000);
+    var audio = document.getElementById('myAudio');
+    audio.play();
     disableButton();
 });
 

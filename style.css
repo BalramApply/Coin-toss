@@ -17,7 +17,7 @@ body{
 /* container */
 .container{
     background-color: #1e59d9;
-    width: 400px;
+    width: 70%;
     padding: 50px;
     position: absolute;
     transform: translate(-50%,-50%);
